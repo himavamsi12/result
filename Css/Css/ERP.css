@@ -1032,7 +1032,7 @@
   right: 0;
 }
 #cssmenustu .has-substu ul li {
-  *margin-bottom: -1px;
+  margin-bottom: -1px;
 
 }
 #cssmenustu .has-substu ul li a {
@@ -1259,7 +1259,7 @@
   right: 0;
 }
 #cssmenuempvar .has-subempvar ul li {
-  *margin-bottom: -1px;
+  margin-bottom: -1px;
 
 }
 #cssmenuempvar .has-subempvar ul li a {
@@ -1511,7 +1511,7 @@
   right: 0;
 }
 #cssmenustuvar .has-substuvar ul li {
-  *margin-bottom: -1px;
+  margin-bottom: -1px;
 
 }
 #cssmenustuvar .has-substuvar ul li a {

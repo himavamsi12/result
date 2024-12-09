@@ -12,11 +12,11 @@
 
     <!--Css files-->
 
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="Css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css//bootstrap.min.css">
     <link href="../Css/css/menunotifications.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="images/beeslogo.png" sizes="32x32" />
-
     <style>
         body, html {
             font-family: 'Arial Rounded MT';
@@ -182,9 +182,9 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <div class="form-right">
-                                    <input type="image" name="ImgBack" id="ImgBack" src="Images/arrow_back_grey600_24dp.png" style="border-width:0px;" />
+                                    
                                     <div class="user_circle ">
-                                        <input type="image" name="ImgUserPhoto" id="ImgUserPhoto" class="img-rounded" src="ERP/Admin/StudentPhotos.aspx?StudId=9945&amp;ColCode=0001&amp;GrpCode=GNITC" style="border-width:0px;" />
+                                        <img id="ctl00_cpHeader_ucStud_Image3" class="user-avatar-md rounded-circle" src="./assessts/user.jpeg" style="border-width:0px; width:80px;margin-bottom:20px;">
                                     </div>
                                     <div class="college_codfe input-group-prepend">
                                         <span>
@@ -192,7 +192,7 @@
                                         <input name="txtPassword" type="password" id="txtPassword" placeholder="Enter Password" class="form-control" />
                                     </div>
                                     <div class="next_button">
-                                        <input type="submit" name="btnSubmit" value="Submit" id="btnSubmit" class="btn btn-primary btn-md btn-block" />
+                                        <input type="button" name="btnNext" value="Submit" id="btnNext" class="btn btn-primary btn-md btn-block" onclick="validateUsername()" />
                                     </div>
                                     <p id="emailHelp" class="form-text text-muted">
                                         <a id="lnkForgorPwd" class="need-help" href="javascript:void(0);">Forgot Your Password?</a>
@@ -223,6 +223,24 @@
     <script src="Css/css/jquery.min.js"></script>
     <script src="Css/css/popper.min.js"></script>
     <script src="Css/css/bootstrap.min.js"></script>
+    <script>
+        function validateUsername() {
+            const allowedUsername = "21WJ1A05U5"; // Replace with the required username
+            const usernameField = document.getElementById("txtPassword");
+            const warningLabel = document.getElementById("lblWarning");
+
+            if (!usernameField.value.trim()) {
+                warningLabel.textContent = "Please enter your password.";
+                return;
+            }
+
+            if (usernameField.value.trim().toLowerCase() === allowedUsername.toLowerCase()) {
+                window.location.href = "home.html"; // Replace with the desired URL
+            } else {
+                warningLabel.textContent = "Invalid password. Please try again.";
+            }
+        }
+    </script>
 
 </body>
 </html>

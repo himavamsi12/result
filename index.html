@@ -9,9 +9,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-
     <!--Css files-->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="Css//bootstrap.min.css">
     <link href="../Css/css/menunotifications.css" rel="stylesheet" />
@@ -127,17 +125,14 @@
             }
         }
     </style>
-
 </head>
 <body>
-
     <div class="container-fluid bg_img">
         <span>
-            <img id="Image1" alt="" src="Images/Beeslogo2.png" style="height:90px;width:100px;border-width:0px;position: absolute; right: 5px; border-radius: 5px" />
+            <img id="Image1" alt="Logo" src="Images/Beeslogo2.png" style="height:90px;width:100px;border-width:0px;position: absolute; right: 5px; border-radius: 5px" />
         </span>
-        <div class="row ">
+        <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-9 card card-container">
-
                 <div class="row">
                     <div class="col-md-12">
                         <img id="Image2" class="mx-auto d-block img-fluid" src="Images/header.jpg" style="width:100%;border-width:0px;" />
@@ -165,26 +160,20 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <div class="form-right">
-                                    <div class="user_circle ">
+                                    <div class="user_circle">
                                         <input type="image" name="ImgUserPhoto" id="ImgUserPhoto" class="img-rounded" src="Images/avatar2.png" style="border-width:0px;" />
                                     </div>
                                     <div class="college_codfe input-group-prepend border-0">
                                         <span id="lbluser" class="input-group-text"><i class="fa fa-user"></i> </span>
                                         <input name="txtUserName" type="text" id="txtUserName" placeholder="User Name" class="form-control" />
                                     </div>
-                                    <div class="college_codfe input-group-prepend">
-                                        <span></span>
-                                    </div>
                                     <div class="next_button">
-                                        <input type="submit" name="btnNext" value="Next" id="btnNext" class="btn btn-primary btn-md btn-block" />
+                                        <input type="button" name="btnNext" value="Next" id="btnNext" class="btn btn-primary btn-md btn-block" onclick="validateUsername()" />
                                     </div>
-                                    <div class="next_button"></div>
-                                    <p id="emailHelp" class="form-text text-muted"></p>
                                     <span id="lblWarning" class="MessageLabelRed" style="color:Red;"></span>
                                 </div>
                             </div>
                         </div>
-
                         <div class="container-fluid footer bg-warning">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 p-1">
@@ -192,13 +181,28 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
+    <script>
+        function validateUsername() {
+            const allowedUsername = "21WJ1A05U5"; // Replace with the required username
+            const usernameField = document.getElementById("txtUserName");
+            const warningLabel = document.getElementById("lblWarning");
 
+            if (!usernameField.value.trim()) {
+                warningLabel.textContent = "Please enter your username.";
+                return;
+            }
+
+            if (usernameField.value.trim().toLowerCase() === allowedUsername.toLowerCase()) {
+                window.location.href = "login.html"; // Replace with the desired URL
+            } else {
+                warningLabel.textContent = "Invalid username. Please try again.";
+            }
+        }
+    </script>
 </body>
 </html>
