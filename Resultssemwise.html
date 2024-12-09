@@ -23,136 +23,7 @@
 		<link rel="stylesheet" href="../../Css/Menus/css/main.css" /><link rel="stylesheet" href="../../Css/Menus/vendor/daterange/daterange.css" />
         <!--Changes-->
     <link rel="shortcut icon" type="image/png" href="../../images/beeslogo.png" sizes="32x32" />
-       <script type="text/javascript">
-
-           function isNumberKeywithDecimal(evt) {
-               var charCode = (evt.which) ? evt.which : event.keyCode;
-               if (charCode != 46 && charCode > 31
-               && (charCode < 48 || charCode > 57))
-                   return false;
-
-               return true;
-           }
-
-           function isNumberKey(evt) {
-               var charCode = (evt.which) ? evt.which : event.keyCode;
-               if ((charCode >= 48 && charCode <= 57) || charCode == 8)
-                   return true;
-
-               return false;
-           }
-
-           function AlphaNumeric(evt) {
-               var theEvent = evt || window.event;
-               var key = theEvent.keyCode || theEvent.which;
-               key = String.fromCharCode(key);
-               var regex = /^[0-9ANA\b]+$/;
-               if (!regex.test(key)) {
-                   theEvent.returnValue = false;
-                   if (theEvent.preventDefault) theEvent.preventDefault();
-               }
-           }
-
-
-           top.window.moveTo(0, 0);
-           if (document.all) {
-               top.window.resizeTo(screen.availWidth, screen.availHeight);
-           }
-           else if (document.layers || document.getElementById) {
-               if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
-
-                   top.window.outerHeight = screen.availHeight;
-                   top.window.outerWidth = screen.availWidth;
-               }
-           }
-
-           function noBack() { window.history.forward(); }
-           noBack();
-           window.onload = noBack;
-           window.onpageshow = function (evt) { if (evt.persisted) noBack(); }
-           window.onunload = function () { void (0); }
-
-           function cancelBack() {
-               if ((event.keyCode == 8 ||
-                  (event.keyCode == 37 && event.altKey) ||
-                  (event.keyCode == 39 && event.altKey))
-                   &&
-                  (event.srcElement.form == null || event.srcElement.isTextEdit == false)
-                 ) {
-                   event.cancelBubble = true;
-                   event.returnValue = false;
-               }
-           }
-           function allownumbers(e) {
-               var key = window.event ? e.keyCode : e.which;
-               var keychar = String.fromCharCode(key);
-               var reg = new RegExp("[0-9]")
-               if (key == 8) {
-                   keychar = String.fromCharCode(key);
-               }
-               if (key == 46) {
-                   keychar = String.fromCharCode(key);
-               }
-               return reg.test(keychar);
-           }
-
-           function allowdate(e) {
-               var key = window.event ? e.keyCode : e.which;
-               var keychar = String.fromCharCode(key);
-               var reg = new RegExp("[0-9/]")
-               if (key == 8) {
-                   keychar = String.fromCharCode(key);
-               }
-               if (key == 46) {
-
-                   keychar = String.fromCharCode(key);
-               }
-               return reg.test(keychar);
-           }
-
-
-           function allownumbersdec(e) {
-               var key = window.event ? e.keyCode : e.which;
-               var keychar = String.fromCharCode(key);
-               var reg = new RegExp("[0-9.]")
-               if (key == 8) {
-                   keychar = String.fromCharCode(key);
-               }
-               if (key == 46) {
-                   keychar = String.fromCharCode(key);
-               }
-               return reg.test(keychar);
-           }
-
-           document.onkeydown = function inspectelement(e) {
-               if (event.keyCode == 123) {
-                   return false;
-               }
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                   return false;
-               }
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-                   return false;
-               }
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                   return false;
-               }
-               if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                   return false;
-               }
-           }
-
-
-
-           document.onmousedown = disableRightclick;
-           var message = "Sorry ! Right Click No Access.";
-           function disableRightclick(evt) {
-               if (evt.button == 2) {
-                   alert(message);
-                   return false;
-               }
-           }
-       </script>
+  
 
 </head>
 
@@ -165,21 +36,7 @@
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+
 
 
 <div>
@@ -287,7 +144,9 @@ function __doPostBack(eventTarget, eventArgument) {
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
+     .hidden{
+        display: none;
+     }
         .check_boxes {
             display: flex;
             flex-direction: column;
@@ -603,13 +462,28 @@ function __doPostBack(eventTarget, eventArgument) {
              <div class="card-header d-flex p-1 font-weight-bolder">Select the Semester</div>
              <div class="card-body">
                  <div class="row">
-             <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn1" value="I/IV I SEM" id="ctl00_cpStud_btn1" class="btn btn-success btn-sm" style="font-weight:bold;" /></div>
-              <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn2" value="I/IV II SEM" id="ctl00_cpStud_btn2" class="btn btn-success  btn-sm" style="font-weight:bold;" /></div>
-              <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn3" value="II/IV I SEM" id="ctl00_cpStud_btn3" class="btn btn-success btn-sm" style="font-weight:bold;" /> </div>
-              <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn4" value="II/IV II SEM" id="ctl00_cpStud_btn4" class="btn btn-success btn-sm" style="font-weight:bold;" /></div>
-              <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn5" value="III/IV I SEM" id="ctl00_cpStud_btn5" class="btn btn-success btn-sm" style="font-weight:bold;" /></div>
-              <div class="col-xl-1 col-lg-1 col-md-2"><input type="submit" name="ctl00$cpStud$btn6" value="III/IV II SEM" id="ctl00_cpStud_btn6" class="btn btn-success btn-sm" style="font-weight:bold;" /></div>
-              <div class="col-xl-1 col-lg-1 col-md-2"></div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn1" id="ctl00_cpStud_btn1" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(1)">I/IV I SEM</button>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn2" id="ctl00_cpStud_btn2" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(2)">I/IV II SEM</button>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn3" id="ctl00_cpStud_btn3" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(3)">II/IV I SEM</button>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn4" id="ctl00_cpStud_btn4" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(4)">II/IV II SEM</button>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn5" id="ctl00_cpStud_btn5" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(5)">III/IV I SEM</button>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-2">
+                        <button type="button" name="ctl00$cpStud$btn6" id="ctl00_cpStud_btn6" class="btn btn-success btn-sm" style="font-weight:bold;" onclick="showTable(6)">III/IV II SEM</button>
+                    </div>
+                    
+                    
+              <div class="col-xl-1 col-lg-1 col-md-2">
+              </div>
               <div class="col-xl-1 col-lg-1 col-md-2"></div>
               <div class="col-xl-1 col-lg-1 col-md-2"></div>
               <div class="col-xl-1 col-lg-1 col-md-2"></div>
@@ -621,57 +495,260 @@ function __doPostBack(eventTarget, eventArgument) {
            <div class="row">
              <div class="col-xl-12 col-lg-12 col-md-12"> <span id="ctl00_cpStud_lblSemDetails" class="MessageLabelRed" style="color:Blue;font-size:Medium;font-weight:bold;"></span></div>
              
-         </div>
-          <div class="card mt-2">
+             </div>
+               <div class="card mt-2">
              <div class="card-header d-flex p-1 font-weight-bolder">Grade Details</div>
              <div class="card-body">
                  <div class="row">
              <div class="col-xl-12 col-lg-12 col-md-12">
-                 <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+       
+                    <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-0 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+                       
+                                
+                                               <div>
+                           <table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+                               <tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+                                   <th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+                               </tr><tr align="left" valign="middle" style="height:25px;">
+                                   <td align="center" style="width:40px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td style="width:450px;">&nbsp;</td><td align="center" style="width:120px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td>
+                               </tr>
+                           </tbody></table>
+                       </div>
+                                
+                                           
+                   </div>
+            
+                <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-1 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
 					
                              
-                                            <div>
+                    <div>
+<table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+    <tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+        <th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21BS0MA01</td><td style="width:450px;">Mathematics–I</td><td align="center" style="width:120px;">May 2022(1)</td><td align="center" style="width:100px;">B</td><td align="center" style="width:100px;">4.00</td><td align="center" style="width:100px;">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">2</td><td align="center">21BS0CH01</td><td>Chemistry</td><td align="center">May 2022(1)</td><td align="center">A</td><td align="center">4.00</td><td align="center">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">3</td><td align="center">21ES0EE01</td><td>Basic Electrical Engineering</td><td align="center">May 2022(1)</td><td align="center">A</td><td align="center">4.00</td><td align="center">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">4</td><td align="center">21ES0CS01</td><td>Programming for Problem Solving</td><td align="center">May 2022(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">5</td><td align="center">21BS0CH02</td><td>Chemistry Lab</td><td align="center">May 2022(1)</td><td align="center">A+</td><td align="center">1.50</td><td align="center">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">6</td><td align="center">21ES0EE02</td><td>Basic Electrical Engineering Lab</td><td align="center">May 2022(1)</td><td align="center">B+</td><td align="center">1.00</td><td align="center">PASS</td>
+    </tr><tr align="left" valign="middle" style="height:25px;">
+        <td align="center">7</td><td align="center">21ES0CS02</td><td>Programming for Problem Solving Lab</td><td align="center">May 2022(1)</td><td align="center">O</td><td align="center">2.00</td><td align="center">PASS</td>
+    </tr>
+</table>
+</div>
+     
+                
+                    </div>
+                <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-2 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+					
+                             
+                    <div>
 						<table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
-							<tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+							<tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
 								<th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
 							</tr><tr align="left" valign="middle" style="height:25px;">
-								<td align="center" style="width:40px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td style="width:450px;">&nbsp;</td><td align="center" style="width:120px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td><td align="center" style="width:100px;">&nbsp;</td>
+								<td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21BS0MA02</td><td style="width:450px;">Mathematics – II</td><td align="center" style="width:120px;">October 2022(1)</td><td align="center" style="width:100px;">B+</td><td align="center" style="width:100px;">4.00</td><td align="center" style="width:100px;">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">2</td><td align="center">21BS0PH03</td><td>Applied Physics</td><td align="center">October 2022(1)</td><td align="center">B+</td><td align="center">4.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">3</td><td align="center">21HS0EN01</td><td>English</td><td align="center">October 2022(1)</td><td align="center">A</td><td align="center">2.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">4</td><td align="center">21ES0ME01</td><td>Engineering Graphics</td><td align="center">October 2022(1)</td><td align="center">A+</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">5</td><td align="center">21BS0PH04</td><td>Applied Physics Lab</td><td align="center">October 2022(1)</td><td align="center">O</td><td align="center">1.50</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">6</td><td align="center">21HS0EN02</td><td>English Lab</td><td align="center">October 2022(1)</td><td align="center">A+</td><td align="center">1.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">7</td><td align="center">21ES0ME03</td><td>Engineering Workshop</td><td align="center">October 2022(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
 							</tr>
-						</table>
+						</tbody></table>
 					</div>
+
+
+                 </div>
+                 <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-3 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+					
+                    <div>
+						<table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+							<tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+								<th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21ES0EC24</td><td style="width:450px;">Analog &amp; Digital Electronics</td><td align="center" style="width:120px;">March 2023(1)</td><td align="center" style="width:100px;">B+</td><td align="center" style="width:100px;">3.00</td><td align="center" style="width:100px;">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">2</td><td align="center">21PC0CS01</td><td>Computer Organization &amp; Architecture</td><td align="center">March 2023(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">3</td><td align="center">21PC0CS02</td><td>Data Structures</td><td align="center">March 2023(1)</td><td align="center">A+</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">4</td><td align="center">21PC0CS03</td><td>Discrete Mathematics</td><td align="center">March 2023(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">5</td><td align="center">21PC0CS04</td><td>Object Oriented Programming through JAVA</td><td align="center">March 2023(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">6</td><td align="center">21ES0EC25</td><td>Analog &amp; Digital Electronics Lab</td><td align="center">March 2023(1)</td><td align="center">O</td><td align="center">1.50</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">7</td><td align="center">21PC0CS05</td><td>Data Structures Lab</td><td align="center">March 2023(1)</td><td align="center">A+</td><td align="center">2.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">8</td><td align="center">21PC0CS06</td><td>IT Workshop Lab</td><td align="center">March 2023(1)</td><td align="center">A+</td><td align="center">1.50</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">9</td><td align="center">21PC0CS07</td><td>Object Oriented Programming through JAVA Lab</td><td align="center">March 2023(1)</td><td align="center">A+</td><td align="center">2.00</td><td align="center">PASS</td>
+							</tr>
+						</tbody></table>
+					</div>
+                
+                
+                                 </div>
+                 <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-4 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+					
+                    <div>
+						<table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+							<tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+								<th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21SS0MB03</td><td style="width:450px;">Organizational Behavior</td><td align="center" style="width:120px;">September 2023(1)</td><td align="center" style="width:100px;">B+</td><td align="center" style="width:100px;">3.00</td><td align="center" style="width:100px;">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">2</td><td align="center">21PC0CS08</td><td>Design &amp; Analysis of Algorithms</td><td align="center">September 2023(1)</td><td align="center">A+</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">3</td><td align="center">21PC0CS09</td><td>Data Base Management Systems</td><td align="center">September 2023(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">4</td><td align="center">21PC0CS10</td><td>Operating Systems</td><td align="center">September 2023(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">5</td><td align="center">21HS0EN04</td><td>Effective Technical Communication</td><td align="center">September 2023(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">6</td><td align="center">21PC0CS11</td><td>Design &amp; Analysis of Algorithms Lab</td><td align="center">September 2023(1)</td><td align="center">O</td><td align="center">2.00</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">7</td><td align="center">21PC0CS12</td><td>Data Base Management Systems Lab</td><td align="center">September 2023(1)</td><td align="center">A+</td><td align="center">1.50</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">8</td><td align="center">21PC0CS13</td><td>Operating Systems Lab</td><td align="center">September 2023(1)</td><td align="center">A+</td><td align="center">1.50</td><td align="center">PASS</td>
+							</tr><tr align="left" valign="middle" style="height:25px;">
+								<td align="center">9</td><td align="center">21MC0EN02 </td><td>Gender Sensitization Lab  </td><td align="center">September 2023(1)</td><td align="center">B+</td><td align="center">0.00</td><td align="center">PASS</td>
+							</tr>
+						</tbody></table>
+					</div>
+                                
+                                
+                                                 </div>   
+                 <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus  semester-table table-5 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+					
                              
-                                        
+                                                    <div>
+                                <table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+                                    <tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+                                        <th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21PC0CS14</td><td style="width:450px;">Computer Networks</td><td align="center" style="width:120px;">January 2024(1)</td><td align="center" style="width:100px;">B+</td><td align="center" style="width:100px;">4.00</td><td align="center" style="width:100px;">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">2</td><td align="center">21PC0CS15</td><td>Formal Languages &amp; Automata Theory</td><td align="center">January 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">3</td><td align="center">21PC0CS16</td><td>Software Engineering</td><td align="center">January 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">4</td><td align="center">21PE0CS1C</td><td>Principles of Programming Languages</td><td align="center">January 2024(1)</td><td align="center">B</td><td align="center">3.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">5</td><td align="center">21OE0CE1A</td><td>Disaster Preparedness &amp; Planning Mangament</td><td align="center">January 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">6</td><td align="center">21PC0CS17</td><td>Computer Networks Lab</td><td align="center">January 2024(1)</td><td align="center">A+</td><td align="center">1.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">7</td><td align="center">21PC0CS18</td><td>Software Engineering Lab</td><td align="center">January 2024(1)</td><td align="center">A+</td><td align="center">2.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">8</td><td align="center">21PC0CS19</td><td>Scripting Languages Lab</td><td align="center">January 2024(1)</td><td align="center">A+</td><td align="center">2.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">9</td><td align="center">21MC0CH01</td><td>Environmental Science</td><td align="center">January 2024(1)</td><td align="center">B+</td><td align="center">0.00</td><td align="center">PASS</td>
+                                    </tr><tr align="left" valign="middle" style="height:25px;">
+                                        <td align="center">10</td><td align="center">21MC0CS02</td><td>Fundamentals of Cyber Security</td><td align="center">January 2024(1)</td><td align="center">B+</td><td align="center">0.00</td><td align="center">PASS</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                                     
+                                                
+                        </div>      
+                        
+                 <div id="ctl00_cpStud_panelSemwise" class="gridAutoMenus semester-table table-6 hidden" style="color:Black;border-width:1px;border-style:Solid;font-weight:normal;width:100%;text-align:left;">
+					
+                             
+                            <div>
+        <table cellspacing="0" rules="all" border="1" id="ctl00_cpStud_grdSemwise" style="font-family:Arial;font-size:11pt;width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word">
+            <tbody><tr align="center" valign="middle" style="color:Black;background-color:#C9D0C6;height:30px;">
+                <th align="center" scope="col">SlNo</th><th align="center" scope="col">Exam Code</th><th align="center" scope="col">Subject ( No of Attempts )</th><th align="center" scope="col">Month &amp; Year</th><th align="center" scope="col">FinalGrade</th><th align="center" scope="col">Credits</th><th align="center" scope="col">Status</th>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center" style="width:40px;">1</td><td align="center" style="width:100px;">21SS0MB16</td><td style="width:450px;">Management Science</td><td align="center" style="width:120px;">August 2024(1)</td><td align="center" style="width:100px;">B+</td><td align="center" style="width:100px;">3.00</td><td align="center" style="width:100px;">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">2</td><td align="center">21PC0CS20</td><td>Compiler Design</td><td align="center">August 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">3</td><td align="center">21PC0CS21</td><td>Web Technologies</td><td align="center">August 2024(1)</td><td align="center">A+</td><td align="center">3.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">4</td><td align="center">21PE0CS2C</td><td>Information Security</td><td align="center">August 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">5</td><td align="center">21PE0CS3C</td><td>Software Project Management</td><td align="center">August 2024(1)</td><td align="center">A</td><td align="center">3.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">6</td><td align="center">21OE0EC2B</td><td>Principles of Electronic Communications</td><td align="center">August 2024(1)</td><td align="center">B+</td><td align="center">3.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">7</td><td align="center">21PC0CS22</td><td>Compiler Design Lab</td><td align="center">August 2024(1)</td><td align="center">A</td><td align="center">1.50</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">8</td><td align="center">21PC0CS23</td><td>Web Technologies Lab</td><td align="center">August 2024(1)</td><td align="center">A+</td><td align="center">1.50</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">9</td><td align="center">21MC0EN01</td><td>Constitution of India</td><td align="center">August 2024(1)</td><td align="center">B</td><td align="center">0.00</td><td align="center">PASS</td>
+            </tr><tr align="left" valign="middle" style="height:25px;">
+                <td align="center">10</td><td align="center">21MC0CS01</td><td>Fundamentals of Artificial Intelligence</td><td align="center">August 2024(1)</td><td align="center">C</td><td align="center">0.00</td><td align="center">PASS</td>
+            </tr>
+        </tbody></table>
+    </div>
+             
+                        
+</div>      
 				</div>
              </div>
 
                  </div></div></div>
-         <div class="row mt-2">
-           <div class="col-xl-3 col-lg-3 col-md-12"> <span id="ctl00_cpStud_lblSemSGPA" class="MessageLabelRed" style="color:Black;font-size:Medium;font-weight:bold;">SGPA :</span></div>
-         <div class="col-xl-3 col-lg-3 col-md-12"> <span id="ctl00_cpStud_lblSemCGPA" class="MessageLabelRed" style="color:Black;font-size:Medium;font-weight:bold;">CGPA :</span></div>
+              <div class="row mt-2">
+              <div class="col-xl-3 col-lg-3 col-md-12"> <span id="ctl00_cpStud_lblSemSGPA" class="MessageLabelRed" style="color:Black;font-size:Medium;font-weight:bold;">SGPA :</span></div>
+             <div class="col-xl-3 col-lg-3 col-md-12"> <span id="ctl00_cpStud_lblSemCGPA" class="MessageLabelRed" style="color:Black;font-size:Medium;font-weight:bold;">CGPA :</span></div>
              
-         </div>
-    <div class="row">
+               </div>
+               <div class="row">
              
              
-         </div>
+                </div>
         
      
-			</div>    
-        </div> 
+			  </div>    
+              </div> 
     
                                                 </td>
                                             </tr>
                                         </table>
                                     
-		</div></td>
-	</tr>
-</table>                    
+		      </div></td>
+	            </tr>
+               </table>                    
                     </div>                   
                 </td>                
-            </tr> 
+              </tr> 
            
-        </table> 
-   </form>
+               </table> 
+                 </form>
              </div>
+
+             <script>
+                function showTable(tableNumber) {
+              
+                    const tables = document.querySelectorAll('.semester-table');
+                    tables.forEach(function(table) {
+                        table.classList.add('hidden');
+                    });
+            
+                    const selectedTable = document.querySelector('.table-' + tableNumber);
+                    if (selectedTable) {
+                        selectedTable.classList.remove('hidden');
+                    }
+                }
+              showTable(0);
+               
+            </script>
+            
+
 </body>
 </html>
