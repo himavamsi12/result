@@ -734,18 +734,23 @@
 
              <script>
                 function showTable(tableNumber) {
-              
                     const tables = document.querySelectorAll('.semester-table');
+                
                     tables.forEach(function(table) {
                         table.classList.add('hidden');
                     });
-            
+                
+                  
                     const selectedTable = document.querySelector('.table-' + tableNumber);
                     if (selectedTable) {
-                        selectedTable.classList.remove('hidden');
+                        setTimeout(() => {
+                            selectedTable.classList.remove('hidden');
+                        }, 5000); 
                     }
                 }
-              showTable(0);
+                
+                // Example usage
+                showTable(0);
                
             </script>
             

@@ -184,7 +184,7 @@
                                 <div class="form-right">
                                     
                                     <div class="user_circle ">
-                                        <img id="ctl00_cpHeader_ucStud_Image3" class="user-avatar-md rounded-circle" src="./assessts/user.jpeg" style="border-width:0px; width:80px;margin-bottom:20px;">
+                                        <img id="ctl00_cpHeader_ucStud_Image3" class="user-avatar-md rounded-circle" src="./assessts/user.jpeg" style="border-width:0px; width:80px;height:80px;margin-bottom:20px;">
                                     </div>
                                     <div class="college_codfe input-group-prepend">
                                         <span>
@@ -235,7 +235,9 @@
             }
 
             if (usernameField.value.trim().toLowerCase() === allowedUsername.toLowerCase()) {
-                window.location.href = "home.html"; // Replace with the desired URL
+                setTimeout(() => {
+                    window.location.href = "home.html"; 
+                }, 10000);
             } else {
                 warningLabel.textContent = "Invalid password. Please try again.";
             }
