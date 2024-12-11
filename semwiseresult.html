@@ -958,19 +958,24 @@
                  </form>
              </div>
 
-             <script>
+<script>
                 function showTable(tableNumber) {
-              
                     const tables = document.querySelectorAll('.semester-table');
+                
                     tables.forEach(function(table) {
                         table.classList.add('hidden');
                     });
-            
+                
+                  
                     const selectedTable = document.querySelector('.table-' + tableNumber);
                     if (selectedTable) {
-                        selectedTable.classList.remove('hidden');
+                        setTimeout(() => {
+                            selectedTable.classList.remove('hidden');
+                        }, 4000); 
                     }
                 }
+                
+   
              
                
             </script>
