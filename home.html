@@ -5579,7 +5579,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
                        <li>
 
-                           <span id="ctl00_cpHeader_ucStud_lblStudentName" class="studentname mb-5" style="font-weight:bold;">WELCOME  SHAIK ASHRAFF (21WJ1A05U5)</span>
+                           <span id="ctl00_cpHeader_ucStud_lblStudentName" class="studentname mb-5" style="font-weight:bold;">WELCOME  Shaik ashraff (21WJ1A05U5)</span>
                            <div class="dropdown">
                                
 
@@ -5829,12 +5829,12 @@ function __doPostBack(eventTarget, eventArgument) {
                                                        <li>
                                                            </li>
                                                        <li>
-                                                           <a id="ctl00_cpHeader_ucStud_lnkOverallMarksSemwise" href="./semwiseresult.html">Overall Marks - SemwiseGrade</a></li>
+                                                        <a id="ctl00_cpHeader_ucStud_lnkOverallMarksSemwise" href="#" onclick="redirectWithDelay()">Overall Marks - SemwiseGrade</a>
                                                        
                                                        <li>
                                                            </li>
                                                        <li>
-                                                           <a id="ctl00_cpHeader_ucStud_lnkOverallResult" href="./overall.html">Overall Result</a></li>
+                                                           <a id="ctl00_cpHeader_ucStud_lnkOverallResult" href="#" onclick="redirectWithDelay1()">Overall Result</a></li>
                                                        <li>
                                                            </li>
                                                        <li>
@@ -6310,7 +6310,18 @@ function __doPostBack(eventTarget, eventArgument) {
                    </form></div>                   
                                
             
-          
+                   <script>
+                    function redirectWithDelay() {
+                        setTimeout(function() {
+                            window.location.href = 'semwiseresult.html';
+                        }, 200000); // 5 seconds delay
+                    }
+                    function redirectWithDelay1() {
+                      setTimeout(function() {
+                          window.location.href = 'semwiseresult.html';
+                      }, 200000); // 5 seconds delay
+                  }
+                </script>       
         
   
             
