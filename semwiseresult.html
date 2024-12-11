@@ -303,7 +303,7 @@
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-sm  navbar-light" style="background-color: #036;">
                 <a class="navbar-brand" href="#">
-                    <img id="ctl00_cpHeader_ucStudCorner_Image3" class="user-avatar-md rounded-circle" src="../../Images/logo.jpg" style="border-width:0px;" />
+                    <img id="ctl00_cpHeader_ucStudCorner_Image3" class="user-avatar-md rounded-circle" src="./assessts/logo.jpg" style="border-width:0px;" />
                     
                     <span id="ctl00_cpHeader_ucStudCorner_lblCollegeName" class="collegename" style="color:#FFFFFF;font-family:Arial;font-size:16pt;font-weight:bold;text-transform: initial; text-shadow: 2px 2px 4px #000000;">GURU NANAK INSTITUTIONS TECHNICAL CAMPUS</span>
 
@@ -316,7 +316,7 @@
 
                         <li>
 
-                            <span id="ctl00_cpHeader_ucStudCorner_lblStudentName" class="studentname mb-5" style="font-weight:bold;">WELCOME       VARDHINENI DEEKSHITH RAO  ( 21WJ1A05Y1  )  </span>
+                            <span id="ctl00_cpHeader_ucStudCorner_lblStudentName" class="studentname mb-5" style="font-weight:bold;">WELCOME Shaik ashraff (21WJ1A05U5)</span>
                             <div class="dropdown">
                                 
 
@@ -347,7 +347,7 @@
                             <div class="dropdown">
 
                                 <button class="dropbtn">
-                                    <input type="image" name="ctl00$cpHeader$ucStudCorner$ImgStudPic" id="ctl00_cpHeader_ucStudCorner_ImgStudPic" class="user-avatar-md rounded-circle" src="../../ERP/Admin/StudentPhotos.aspx?StudId=9945&amp;ColCode=0001&amp;GrpCode=GNITC" style="border-width:0px;" />
+                                    <img id="ctl00_cpHeader_ucStud_Image3" class="user-avatar-md rounded-circle" src="./assessts/user.jpeg" style="border-width:0px;">
                                     
                                 </button>
 
@@ -958,24 +958,19 @@
                  </form>
              </div>
 
-<script>
+             <script>
                 function showTable(tableNumber) {
+              
                     const tables = document.querySelectorAll('.semester-table');
-                
                     tables.forEach(function(table) {
                         table.classList.add('hidden');
                     });
-                
-                  
+            
                     const selectedTable = document.querySelector('.table-' + tableNumber);
                     if (selectedTable) {
-                        setTimeout(() => {
-                            selectedTable.classList.remove('hidden');
-                        }, 4000); 
+                        selectedTable.classList.remove('hidden');
                     }
                 }
-                
-   
              
                
             </script>
